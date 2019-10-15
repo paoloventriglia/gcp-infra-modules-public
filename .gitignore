@@ -1,0 +1,5 @@
+corebox-001-244109*.json
+*.terraform
+gcp-tf-instances/.terraform
+terraform.tfstate.*
+provider.tf

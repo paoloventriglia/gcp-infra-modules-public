@@ -1,0 +1,21 @@
+Stackdriver monitoring
+
+Uptime Checks
+***Uptime checks need minimum of 3 regions to work. GCP IP addresses needs to be allowed through FW if site not public***
+https://cloud.google.com/monitoring/uptime-checks/
+https://cloud.google.com/monitoring/uptime-checks/using-uptime-checks#get-ips
+
+
+Metrics
+https://cloud.google.com/monitoring/api/metrics
+https://cloud.google.com/monitoring/alerts/
+https://cloud.google.com/logging/docs/logs-based-metrics/
+
+Terraform
+https://www.terraform.io/docs/providers/google/r/monitoring_uptime_check_config.html
+https://www.terraform.io/docs/providers/google/r/monitoring_alert_policy.html
+https://www.terraform.io/docs/providers/google/r/monitoring_notification_channel.html
+
+Issue  - "Absence of metric" alert doesn't work for alerting on instance down
+https://issuetracker.google.com/issues/119491735
+https://stackoverflow.com/questions/53095774/stackdriver-monitoring-metric-absent
