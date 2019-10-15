@@ -4,6 +4,11 @@ variable "name" {
   description = ""
 }
 
+variable "org" {
+  default = "corebox"
+  description = ""
+}
+
 variable "project" {
   default = ""
   description = ""

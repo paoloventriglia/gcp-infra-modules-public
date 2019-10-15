@@ -1,5 +1,43 @@
-corebox-001-244109*.json
-*.terraform
-gcp-tf-instances/.terraform
-terraform.tfstate.*
-provider.tf
+# OSX leaves these everywhere on SMB shares
+._*
+
+# OSX trash
+.DS_Store
+*.pyc*
+
+# Emacs save files
+*~
+\#*\#
+.\#*
+.idea
+# Vim-related files
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]
+*.un~
+Session.vim
+.netrwhist
+
+### https://raw.github.com/github/gitignore/90f149de451a5433aebd94d02d11b0e28843a1af/Terraform.gitignore
+
+# Local .terraform directories
+**/.terraform/*
+
+# Local .kitchen directories
+**/.kitchen/*
+
+# .tfstate files
+*.tfstate
+*.tfstate.*
+
+# Crash log files
+crash.log
+
+*corebox-001-244109*.json
+*.terraform*
+*terraform.tfstate*
+
+# Ignore any .tfvars files that are generated automatically for each Terraform run. Most
+# .tfvars files are managed as part of configuration and so should be included in
+# version control.
+#
+# example.tfvars
