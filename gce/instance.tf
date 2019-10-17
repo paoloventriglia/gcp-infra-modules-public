@@ -1,9 +1,9 @@
 resource "random_string" "random" {
-  count = var.instance_count
-  length = 8
-  lower = "true"
-  upper = "false"
-  number = "false"
+  count   = var.instance_count
+  length  = 8
+  lower   = "true"
+  upper   = "false"
+  number  = "false"
   special = "false"
 }
 
@@ -12,7 +12,7 @@ resource "google_compute_instance" "vm" {
   name         = "${var.org}-${element(random_string.random.*.id, count.index)}"
   machine_type = var.machine_type
   zone         = var.zone
-  tags = ["${var.org}-${element(random_string.random.*.id, count.index)}"]
+  tags         = ["${var.org}-${element(random_string.random.*.id, count.index)}"]
 
 
   boot_disk {
@@ -21,7 +21,7 @@ resource "google_compute_instance" "vm" {
     }
   }
   network_interface {
-    network = var.network
+    network    = var.network
     subnetwork = var.subnetwork
 
 

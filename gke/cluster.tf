@@ -30,7 +30,7 @@ resource "google_container_cluster" "primary" {
   location          = local.location
   node_locations    = local.node_locations
   cluster_ipv4_cidr = var.cluster_ipv4_cidr
-  network           = data.google_compute_network.gke_network.self_link
+  network           = var.network
 
   dynamic "network_policy" {
     for_each = local.cluster_network_policy
@@ -41,7 +41,7 @@ resource "google_container_cluster" "primary" {
     }
   }
 
-  subnetwork         = data.google_compute_subnetwork.gke_subnetwork.self_link
+  subnetwork         = var.subnetwork
   min_master_version = local.master_version
 
   logging_service    = var.logging_service

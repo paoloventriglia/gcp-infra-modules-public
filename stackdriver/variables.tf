@@ -1,16 +1,16 @@
 
 variable "name" {
-  default = ""
+  default     = ""
   description = ""
 }
 
 variable "project" {
-  default = ""
+  default     = ""
   description = ""
 }
 
 variable "machine_type" {
-  default = "n1-standard-1"
+  default     = "n1-standard-1"
   description = ""
 }
 
@@ -20,115 +20,115 @@ variable "instance_count" {
 
 
 variable "region" {
-  default = "europe-west2"
+  default     = "europe-west2"
   description = ""
 }
 
 variable "zone" {
-  default = "europe-west2-a"
+  default     = "europe-west2-a"
   description = ""
 }
 
 variable "image" {
-  default = "windows-server-2016-dc-v20190910"
+  default     = "windows-server-2016-dc-v20190910"
   description = ""
 }
 
 variable "network" {
-  default = "my-network"
+  default     = "my-network"
   description = ""
 }
 
 variable "subnetwork" {
-  default = ""
+  default     = ""
   description = ""
 }
 
 variable "uptime_alert_name" {
-  default = "vm_uptime_check"
+  default     = "vm_uptime_check"
   description = ""
 }
 
 variable "uptime_check_name" {
-  default = ""
+  default     = ""
   description = ""
 }
 
 variable "group_name" {
-  default = ""
+  default     = ""
   description = ""
 }
 
 variable "group_filter" {
-  default = ""
+  default     = ""
   description = ""
 }
 
 variable "cpu_alert_name" {
-  default = "vm_cpu_utilization"
+  default     = "vm_cpu_utilization"
   description = ""
 }
 
 variable "cpu_alter_max_threshold" {
-  default = ""
+  default     = ""
   description = ""
 }
 
 variable "filter" {
-  default = ""
+  default     = ""
   description = ""
 }
 
 variable "duration" {
-  default = "60s"
+  default     = "60s"
   description = ""
 }
 
 variable "trigger_percent" {
-  default = "50"
+  default     = "50"
   description = ""
 }
 
 variable "trigger_count" {
-  default = "1"
+  default     = "1"
   description = ""
 }
 
 variable "alignment_period" {
-  default = "60s"
+  default     = "60s"
   description = ""
 }
 
 variable "uptime_aligner" {
-  default = ""
+  default     = ""
   description = ""
 }
 
 variable "cpu_aligner" {
-  default = ""
+  default     = ""
   description = ""
 }
 
 variable "cpu_max_theshold_duration" {
-  default = "60s"
+  default     = "60s"
   description = ""
 }
 
 variable "channel_name" {
-  default = ""
+  default     = ""
   description = ""
 }
 
 variable "channel_type" {
-  default = ""
+  default     = ""
   description = ""
 }
 
 variable "email_address" {
-  default = ""
+  default     = ""
   description = ""
 }
 
 data "template_file" "metadata_startup_script" {
-    template = file("${path.module}/files/startup.tpl")
+  template = file("${path.module}/files/startup.tpl")
 }
